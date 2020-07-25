@@ -1,8 +1,9 @@
+from api_keys import *
 import tweepy
 import time
 
-auth = tweepy.OAuthHandler('n3lPexY5pW3ggZKqqkg96GgVQ','iwG5v2kEgUOP827477UxOzVrnXQOBY3gigpz5EsHIfZFXuW1pB')
-auth.set_access_token('2886536636-xFqrUoD1llCEWtTWXGJi4FDvyAt9gNvdLwigwE6','4VTVEUswtztwGm2g9BX38dSpuAa8dHL3vnGnZlczhXi53')
+auth = tweepy.OAuthHandler(api_key,api_key_secret)
+auth.set_access_token(access_token,access_token_secret)
 apiData = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 def like_by_user():
